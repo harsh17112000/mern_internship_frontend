@@ -60,7 +60,6 @@ const Home = () => {
   const exportuser = async()=>{
     const response = await exporttocsvfunc();
     if(response.status === 200){
-      console.log(response.data.downloadUrl);
       window.open(response.data.downloadUrl,"blank")
     }else{
       toast.error("error !")
